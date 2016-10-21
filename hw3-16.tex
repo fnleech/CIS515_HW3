@@ -52,30 +52,37 @@ Now by induction we can extend our logic for any number of $p\geq 2$  subspaces 
 
 \vspace {0.25cm}\noindent
 {\bf Problem B2 (50 pts).}
-Given any vector space $E$, a linear map  $\mapdef{f}{E}{E}$  is an
-{\it involution\/} if  $f\circ f = \id$.
 
 \medskip
-(1)
-Prove that an  involution $f$ is invertible. What is its inverse?
+(1)\\
+
+By definition an involution is a function $f$ that is its own inverse. \\
+
+$f: E \rightarrow E$ is in an involution when $\forall x \in E: f(f(x)) = x$. Since $f^{-1} = f$, we just have to check that $f(f(x)) =x$ for all x in the domain of f. \\
+
+Let us find the inverse of $f(x) = b -x$ where b is any real number. Let,  
+$$f(x) = a -x$$
+$$y=a-x$$
+$$f^{-1} = a - y $$
+$$ x = a-y$$
+$$y= a-x$$
+so $f(x) = f^{-1}(x)$. So it's an inverse of itself. \\
 
 \medskip
-(2)
-Let $E_1$ and $E_{-1}$ be the subspaces of $E$ defined as follows:
-\begin{align*}
-E_1 & = \{u \in E \mid f(u) = u\} \\
-E_{-1} & = \{u \in E \mid f(u) = -u\}.
-\end{align*}
-Prove that we have a direct sum
-\[
-E = E_{1} \oplus E_{-1}.
-\]
+(2)\\
 
-\hint
-For every $u\in E$, write
-\[
-u = \frac{u + f(u)}{2} + \frac{u - f(u)}{2}. 
-\]
+Let $u_1 = \frac{u + f(u)}{2}$ and $u_{-1} = \frac{u-f(u)}{2}$. \\
+
+Next, we can find that we have something in both the spaces. 
+$f(u_1) = f(\frac{u+f(u)}{2}) = \frac{f(u) + f(f(u))}{2} = \frac{f(u) + u}{2} = u_1$ \\
+$f(u_{-1}) = f(\frac{u-f(u)}{2}) = \frac{f(u)-f(f(u))}{2} = \frac{f(u) - u}{2} = u_{-1}$. \\
+
+Next we need to look at uniqueness. Let $v_1 \in E_1 and \in E_{-1}$. \\
+$f(v_1) = v_1$ \\
+$f(v_1) = -v_1$ \\
+$v_1 = -v_1$ can only have this if $v_1 = -v_1 = 0$. 
+
+
 
 \medskip
 (3)
