@@ -299,10 +299,115 @@ $\theta= k 2\pi$, with $k \in \integs$?
 
 
 \medskip
-(4)
-Prove that  the inverse of $R_{\theta, (a_1,a_2)}$ is of the form
-$R_{-\theta, (b_1,b_2)}$,  and find $(b_1, b_2)$ in terms of
-$\theta$ and $(a_1, a_2)$.
+(4) \\
+
+$R_{\theta, (a_1,a_2)}$ \\
+\[
+\begin{pmatrix}
+y_1 \\
+y_2 \\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos\theta & -\sin\theta & a_1 \\
+\sin\theta & \cos\theta & a_2 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+1 \\
+\end{pmatrix}
+\]
+
+$R_{-\theta, (b_1,b_2)}$ \\
+\[
+\begin{pmatrix}
+y_1 \\
+y_2 \\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos(-\theta) & -\sin(-\theta) & b_1 \\
+\sin(-\theta) & \cos(-\theta) & b_2 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+1 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos(\theta) & \sin(\theta) & b_1 \\
+-\sin(\theta) & \cos(\theta) & b_2 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+1 \\
+\end{pmatrix}
+\] \\
+
+\[
+R_{\theta, (a_1,a_2)} \cdot R_{-\theta, (b_1,b_2)} =
+\begin{pmatrix}
+\cos\theta & -\sin\theta & a_1 \\
+\sin\theta & \cos\theta & a_2 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\begin{pmatrix}
+\cos(\theta) & \sin(\theta) & b_1 \\
+-\sin(\theta) & \cos(\theta) & b_2 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\]
+\[
+=
+\begin{pmatrix}
+\cos^2\theta + \sin^2\theta & cos\theta \sin\theta - cos\theta \sin\theta & \cos\theta b_1 - \sin \theta b_2 + a_1 \\
+cos\theta \sin\theta - cos\theta \sin\theta & \sin^2\theta + \cos^2\theta  & \sin\theta b_1 + \cos\theta b_2 + a_2\\
+0 & 0 & 1 \\
+\end{pmatrix}
+\]
+\[
+=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1  & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\]
+
+So $\cos\theta b_1 - \sin \theta b_2 + a_1 = 0$ and $\sin\theta b_1 + \cos\theta b_2 + a_2 = 0$. \\
+
+Solve for $b_1$, \\
+$b_1 = \frac{- a_1 +  \sin \theta b_2}{\cos\theta}$ \\
+$b_1 = \frac{- a_1}{\cos\theta} + \frac{\sin \theta b_2}{\cos\theta}$ \\
+$b_1 = -\sec\theta a_1 + \tan\theta b_2$ \\
+
+Solve for $b_2$, \\
+$b_2 = \frac{- a_2 +  \sin \theta b_1}{\cos\theta}$  \\
+$b_2 = \frac{- a_2}{\cos\theta} - \frac{\sin \theta b_1}{\cos\theta}$ \\
+$b_2 = \sec\theta a_2 - \tan\theta b_1$ \\
+
+Now plug in $b_2$ into $b_1$.
+
+$b_1 = -\sec\theta a_1 + \tan\theta (\sec\theta a_2 - \tan\theta b_1)$ \\
+$b_1 = \sec\theta a_1 - \tan\theta \sec\theta a_2 - \tan^2\theta b_1$ \\
+$(1-tan^2\theta)b_1 = \sec\theta a_1 - \tan\theta \sec\theta a_2 $ \\
+$b_1 = \frac{-\tan \theta}{\sec \theta}a_2 - \cos \theta a_1$ \\
+$b_1 = - \sin \theta a_2 - \cos \theta a_1$ 
+
+Now plug $b_1$ into $b_2$ we get, 
+$b_2 = \sin \theta a_1 - \cos \theta a_1$. \\
+
+The final answer for $b_1$ and $b_2$ in terms of $\theta$, $a_1$, and $a_2$ is, 
+$$b_1 = -\sin \theta a_2 - \cos \theta a_1$$
+$$b_2 = \sin \theta a_1 - \cos \theta a_1$$
 
 \medskip
 (5)
