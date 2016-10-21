@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsfonts,amssymb,amsmath}
+\usepackage{graphicx}
 %\documentstyle[12pt,amsfonts]{article}
 %\documentstyle{article}
 
@@ -101,9 +102,6 @@ Can you give a geometric interpretation of the action of $f$
 (especially when   $k = n - 1$)?
 
 
-
-
-
 \vspace {0.5cm}\noindent
 {\bf Problem B3 (50 pts).}
 A {\it rotation\/} $R_{\theta}$ in the plane $\reals^2$ is given  by
@@ -123,10 +121,51 @@ on a simple figure such as a triangle or a rectangle,
 for various values of $\theta$, including
 $\theta = \pi/6, \pi/4, \pi/3, \pi/2$.
 
+\includegraphics[scale=.25]{RotationPlot}
+
 \medskip
 (2)
 Prove that $R_{\theta}$ is invertible and that its inverse is
 $R_{-\theta}$.
+
+\[
+\begin{pmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+\cos(-\theta) & -\sin(-\theta) \\
+\sin(-\theta) & \cos(-\theta)
+\end{pmatrix}
+\]
+
+\[
+=
+\begin{pmatrix}
+\cos(1) & -\sin(1) \\
+\sin(1) & \cos(1)
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+\cos(-1) & -\sin(-1) \\
+\sin(-1) & \cos(-1)
+\end{pmatrix}
+\]
+\[
+=
+\begin{pmatrix}
+(\cos\theta \cdot \cos(-theta)) \cdot (-\sin\theta \sin(-\theta)) & -\cos(\theta)0 \\
+\sin(\theta)cos(-theta)+cos\theta \sin(-\theta) & 1\cos(1)
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\]
+
+
 
 \medskip
 (3) For any two rotations $R_{\alpha}$ and $R_{\beta}$, prove that
