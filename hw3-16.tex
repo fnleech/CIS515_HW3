@@ -274,6 +274,78 @@ a_1 \\
 a_2
 \end{pmatrix}.
 \]
+(1)We can write 
+$\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix} = R_{\theta,(a_1,a_2)} \begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix}$ as:
+
+\vspace{0.25cm}
+ \[\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix}= \begin{pmatrix}
+  cos\theta & -sin\theta\\
+  sin\theta & cos\theta
+  \end{pmatrix}\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix} +\begin{pmatrix}
+a_1\\
+a_2
+\end{pmatrix}\]
+  
+Then,
+\begin{equation}
+c_1 = cos\theta c_1 - sin\theta c_2 + a_1 \end{equation}
+\begin{equation} c_2 = sin\theta c_1 + cos\theta c_2 + a_2 \end{equation}
+
+Using the result for $(c_1,c_2)$ as given in the problem and by substituting, we will check if the equations are true for when $\theta\ne k2\pi$.\\
+
+For $c_1$, we are given that
+  
+$$c_1=\frac{1}{2sin\frac{\theta}{2}} (cos(\frac{\pi - \theta}{2})a_1)- sin(\frac{\pi- \theta}{2})a_2)$$
+
+
+ $\frac{1}{2}\frac{cos(\frac{\pi - \theta}{2})}{sin\frac{\theta}{2}}$ simplifies to $\frac{1}{2}$.
+
+ $\frac{-1}{2}\frac{sin(\frac{\pi - \theta}{2})}{sin\frac{\theta}{2}}$ simplifies to $ \frac{1}{2}cot \frac{\theta}{2}$.
+
+so: $$c_1 = \frac{1}{2} (a_1 - cot \frac{\theta}{2}a_2)$$
+
+Similarly, for $c_2$,  it becomes
+$$c_2= \frac{1}{2}cot\frac {\theta}{2}a_1 + \frac{1}{2}a_2$$
+
+Now by substitution into equation (1), we get :
+
+$$\frac{1}{2} (a_1 - cot \frac{\theta}{2}a_2)$$
+
+$$=cos\theta(\frac{1}{2} (a_1 - cot \frac{\theta}{2}a_2)) - sin\theta(\frac{1}{2}cot\frac {\theta}{2}a_1 + \frac{1}{2}a_2) + a_1$$
+
+$$=(\frac{cos\theta}{2} - \frac{sin\theta}{2}cot\frac{\theta}{2} +1)a_1 - \frac{1}{2}(cos\theta cot\frac{\theta}{2} + sin\theta)a_2$$
+
+
+Then, $cos\theta - sin\theta cot \frac{\theta}{2} = -1$ and $cos\theta cot \frac{\theta}{2} + sin\theta = cot \frac{\theta}{2}$
+
+so equation (1) on the right hand side simplifies to  $c_1 = \frac{1}{2} (a_1 - cot \frac{\theta}{2}a_2)$ and matches the left hand side of equation (1).
+
+For equation (2), we get:
+
+$$\frac{1}{2}cot\frac {\theta}{2}a_1 + \frac{1}{2}a_2$$
+
+$$=sin\theta\frac{1}{2} (a_1 - cot \frac{\theta}{2}a_2)+ cos\theta(\frac{1}{2}cot\frac {\theta}{2}a_1 + \frac{1}{2}a_2) + a_2$$
+
+$$=(\frac{sin\theta}{2} + (\frac{1}{2} cos\theta cot\frac{\theta}{2}))a_1 +((\frac{-1}{2}sin\theta cot\frac{\theta}{2} + \frac{cos\theta}{2} +1)a_2$$
+
+Thus, the right hand side of equation (2) simplifies and $c_2= \frac{1}{2}cot\frac {\theta}{2}a_1 + \frac{1}{2}a_2$.
+
+
+
+It is then clear that the unique fixed point is $(c_1,c_2)$ where $\theta\ne k2\pi$ because $cot\frac{\theta}{2}$ is undefined for where $\theta$ is a multiple of $2\pi$.
+
 
 \medskip
 (2)
