@@ -584,7 +584,7 @@ For any $b \in \s{A}$, we can find $u$, write as $b = a + u$. Then   $b - a \in 
 
 \medskip
 (3)
-Choose $x - a \in U_a$, $y - a \in U_a$, $\lambda, \mu \in \reals$, then compute $\lambda (x - a) + \mu (y - a) = \frac{1}{\lambda + \mu}(\frac{\lambda}{\lambda + \mu}(x - a) + \frac{\mu}{\lambda + \mu}(y - a)) = \frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y - a$. Because $\s{A}$ is closed under affine combinations, we have $\frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y \in \s{A}$, then $\lambda (x - a) + \mu (y - a) = \frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y - a \in \reals^n$, $U_a$ is a subspace of $\reals^n$.\\
+Choose $x - a \in U_a$, $y - a \in U_a$, $\lambda, \mu \in \reals$, then compute $\lambda (x - a) + \mu (y - a) = \frac{1}{\lambda + \mu}(\frac{\lambda}{\lambda + \mu}(x - a) + \frac{\mu}{\lambda + \mu}(y - a)) = \frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y - a$. Because $\s{A}$ is closed under affine combinations, we have $\frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y \in \s{A}$, then $\lambda (x - a) + \mu (y - a) = \frac{\lambda}{\lambda + \mu} (\frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y - a) \in \reals^n$, $U_a$ is a subspace of $\reals^n$.\\
 For any $u \in U_a$, we can write as $u = x - a = x + (b - a) - b$. The sum of coefficients of $x, b, a$ is $1 -1 + 1 = 1$, and $\s{A}$ is closed under affine combinations, then $u = x + (b -a)-b \in \s{A} - b \Rightarrow u \in U_b$. $U_a$ does not depend on the choice of $a \in \s{A}$, $U_a = U_b$ for all $a, b\in \s{A}$.
 So $U_a = U = \{y - x \in \reals^n \mid x, y \in \s{A}\}$ and
 $
@@ -592,7 +592,7 @@ $
 $
 
 \medskip
-(4)If $\s{A}\cap \s{B} = (x)$, then we can find $x = a + u = b + v$ where $a \in \s{A}, b \in \s{B}$, $u, v \in U$. Write $b = a + u - v$, thus $b \in \s{A} \Rightarrow \s{A} = \s{B}$, which is against $\s{A} \neq \s{B}$. We have $\s{A} \cap \s{B} = \emptyset$ if $\s{A} \neq \s{B}$ and they are parallel. 
+(4)If $\s{A}\cap \s{B} = (x)$, then we can find $x = a + u = b + v$ where $a \in \s{A}, b \in \s{B}$, $u, v \in U$. Write $b = a + u - v$, thus $b \in \s{A} \Rightarrow \s{A} = \s{B}$, which is against $\s{A} \neq \s{B}$. We have $\s{A} \cap \s{B} = \emptyset$ if $\s{A} \neq \s{B}$ and $\s{A}, \s{B}$ are parallel. 
 
 \vspace {0.25cm}\noindent
 {\bf Problem B6 (120 pts).} (Affine frames and affine maps)
@@ -811,31 +811,46 @@ $f^{-1}(\s{B})$ is an affine subspace of $\reals^n$.
 Let $A$ be any $n\times k$ matrix
 
 \medskip
-(1)
-Prove that the $k\times k$ matrix  $\transpos{A} A$ and the matrix $A$
-have the same nullspace. Use this  to  prove that 
-$\mathrm{rank}(\transpos{A} A) = \mathrm{rank}(A)$.
-Similarly, prove that the $n\times n$ matrix  $A\transpos{A}$ and the
-matrix $\transpos{A}$
-have the same nullspace, and conclude that
-$\mathrm{rank}(A\transpos{A}) = \mathrm{rank}(\transpos{A})$.
-
-\medskip
-We will prove later that
-$\mathrm{rank}(\transpos{A}) =  \mathrm{rank}(A)$.
-
-\medskip
-(2)
-Let $a_1, \ldots, a_k$ be $k$ linearly independent vectors in $\reals^n$
-($1 \leq k \leq n$), and let $A$ be the $n\times k$ matrix whose $i$th
-column is $a_i$.
-Prove that $\transpos{A}A$ has rank $k$, and that it is
-invertible. Let $P = A(\transpos{A}A)^{-1} \transpos{A}$ (an $n\times n$ matrix).
-Prove that
+(1) If choose $u \in ker(A), \;  Au = 0$ then
 \begin{align*}
-P^2 & = P \\
-\transpos{P} & = P.
-\end{align*} 
+&\Rightarrow (\transpos{A} A) u =  \transpos{A} (A u) = 0 \\
+&\Rightarrow u  \in ker(\transpos{A} A) \\
+&\Rightarrow ker(A) \subseteq ker(\transpos{A} A)
+\end{align*}
+For the opposite, choose $v \in ker(\transpos{A} A)$ then 
+\begin{align*}
+&\Rightarrow (\transpos{A} A) u = \transpos{A} (A u) = 0 \\
+&\Rightarrow A u \in ker(\transpos{A}) 
+\end{align*}
+We need to prove $u \in ker(A)$, if not suppose $A u = x \neq 0$, then $\transpos{ ( \transpos{A} x) } = \transpos{x} A = 0$, multiply $u$ on both sides, we have $\transpos{x} A u = \transpos{x} x = 0 \Rightarrow x = 0$, which is against the assumption, thus $u \in ker(A) \Rightarrow ker(\transpos{A} A) \subseteq ker(A)$. From $ker(A) \subseteq ker(\transpos{A} A), ker(\transpos{A} A) \subseteq ker(A)$, get $ker(\transpos{A} A) = ker(A)$.
+From the equation $ dim(ker(A)) + \mathrm{rank}(A) = dim(E) = k$, we can easily find $\mathrm{rank} (\transpos{A} A) = \mathrm{rank}(A) = k - dim(ker(A)) = k - dim(ker(\transpos{A}A))$. We can use the same way to prove $ker(A\transpos{A}) = ker(\transpos{A})$ and $\mathrm{rank}(A\transpos{A}) = \mathrm{\transpos{A}}$. 
+
+\medskip
+(2)From above, we know $\mathrm{rank}(\transpos{A} A) = \mathrm{rank}(A)$. $\mathrm{rank}(A) \leq min \{k, n\} = k$, because $A$ has independent column vectors $(a_i)\; i = 1,2, \cdots k$, then $\mathrm{rank}(A) = k \Rightarrow \mathrm{rank}(\transpos{A} A) = k$.$\transpos{A} A$ has full rank, it is invertible. \\
+First we need to prove two things:
+\begin{align*}
+\transpos{(AB)} &= \transpos{B} \transpos{A} \\
+\transpos{(A^{-1})} &= (\transpos{A})^{-1}
+\end{align*}
+Here is the simple proof:
+\begin{align*}
+\transpos{(AB)}_{ij} &= \sum_k a_{jk}b_{ki} = \sum_k b_{ki}a_{jk} = (\transpos{B} \transpos{A})_{ij} \\
+\transpos{(A^{-1})} \transpos{A} &= \transpos {(A A^{-1})} = I \\
+\Rightarrow \transpos{(A^{-1})} &= (\transpos{A})^{-1}
+\end{align*}
+Then 
+\begin{align*}
+P^2 &= A(\transpos{A}A)^{-1} \transpos{A} \cdot A(\transpos{A}A)^{-1} \transpos{A} \\
+&= A(\transpos{A}A)^{-1} (\transpos{A} A)(\transpos{A}A)^{-1} \\
+&= A(\transpos{A}A)^{-1} \transpos{A} \\
+&= P \\
+\transpos{P} &= \transpos{( A ( \transpos{A} A)^{-1} \transpos{A})} \\
+&=  A \transpos{(\transpos{A}A)^{-1})} \transpos{A} \\
+&= A (\transpos{(\transpos{A}A)})^{-1} \transpos{A} \\
+&= A(\transpos{A}A)^{-1} \transpos{A} \\
+&= P
+\end{align*}
+When $k=1$
 
 What is the matrix $P$ when $k = 1$?
 
