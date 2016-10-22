@@ -573,6 +573,75 @@ R_{\alpha, (a_1,a_2)}$
 is a pure translation. 
 Find the translation vector 
 of $R_{\beta, (b_1,b_2)} \circ R_{\alpha, (a_1,a_2)}$.
+(5) $R_{\beta,(b_1,b_2)}:$
+
+$$\begin{pmatrix}
+y_1\\y_2\\1
+\end{pmatrix}=\begin{pmatrix}
+cos\beta & -sin\beta & b_1\\ sin\beta & cos\beta & b_2 \\ 0&0&1
+\end{pmatrix}\begin{pmatrix}
+x_1\\x_2\\1
+\end{pmatrix}$$
+
+$R_{\alpha,(a_1,a_2)}:$
+
+$$\begin{pmatrix}
+y_1\\y_2\\1
+\end{pmatrix}=\begin{pmatrix}
+cos\alpha & -sin \alpha & a_1\\ sin\alpha & cos\alpha & a_2 \\ 0&0&1
+\end{pmatrix}\begin{pmatrix}
+x_1\\x_2\\1
+\end{pmatrix}$$
+
+$$R_{\beta,(b_1,b_2)}\circ R_{\alpha,(a_1,a_2)}\rightarrow$$
+$$
+\begin{pmatrix}
+cos\beta & -sin\beta & b_1\\ sin\beta & cos\beta & b_2 \\ 0&0&1
+\end{pmatrix}\begin{pmatrix}
+cos\alpha & -sin \alpha & a_1\\ sin\alpha & cos\alpha & a_2 \\ 0&0&1
+\end{pmatrix}$$
+$$= \begin{pmatrix}
+cos\beta cos\alpha - sin\beta sin\alpha & -cos\beta sin\alpha - sin\beta cos\alpha & cos\beta a_1 - sin\beta a_2 + b_1\\
+sin\beta cos\alpha + cos\beta sin\alpha & -sin\beta sin\alpha + cos\beta cos\alpha & sin\beta a_1 + cos\beta a_2 + b_2 \\0&0&1
+
+\end{pmatrix}$$
+
+Using the trig identities from part 4, we get:
+$$\begin{pmatrix}
+cos(\alpha + \beta)& -sin(\alpha + \beta) & t_1\\
+sin(\alpha + \beta) & cos(\alpha + \beta) & t_2 \\
+0&0&1
+\end{pmatrix}$$
+
+Indeed, this matrix represents $R_{\alpha + \beta,(t_1,t_2)}$ where $t_1 = cos\beta a_1 - sin \beta a_2 + b_1$ and $t_2 = sin\beta a_1 + cos\beta a_2 + b_2$.
+
+Furthermore, 
+$$R_{\beta,(b_1,b_2)} \circ R_{\alpha} \rightarrow$$
+$$
+\begin{pmatrix}
+cos\beta & -sin\beta & b_1\\ sin\beta & cos\beta & b_2 \\ 0&0&1
+\end{pmatrix}\begin{pmatrix}
+cos\alpha & -sin\alpha & 0\\ sin\alpha & cos\alpha & 0 \\ 0&0&1
+\end{pmatrix}$$
+$$=\begin{pmatrix}
+cos(\alpha + \beta)& -sin(\alpha + \beta) & b_1\\
+sin(\alpha + \beta) & cos(\alpha + \beta) & b_2 \\
+0&0&1
+\end{pmatrix}$$
+
+However, $R_\alpha \circ R_{\beta,(b_1,b_2)}\rightarrow$
+$$\begin{pmatrix}
+cos\alpha & -sin\alpha & 0\\ sin\alpha & cos\alpha & 0 \\ 0&0&1
+\end{pmatrix}\begin{pmatrix}
+cos\beta & -sin\beta & b_1\\ sin\beta & cos\beta & b_2 \\ 0&0&1
+\end{pmatrix}$$
+$$=
+\begin{pmatrix}
+cos(\alpha + \beta)& -sin(\alpha + \beta) & cos\alpha b_1 - sin\alpha b_2\\
+sin(\alpha + \beta) & cos(\alpha + \beta) &sin\alpha b_1 + cos\alpha b_2 \\
+0&0&1
+\end{pmatrix}$$
+ so generally, $$R_{\beta,(b_1,b_2)} \circ R_{\alpha} \ne R_\alpha \circ R_{\beta,(b_1,b_2)}$$ 
 
 
 \vspace {0.5cm}\noindent
