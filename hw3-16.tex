@@ -638,6 +638,16 @@ if the $m$ vectors $(u_1 - u_0, \ldots, u_m - u_0)$ are linearly
 independent, then the $m + 1$ vectors
 $(\widehat{u}_0, \ldots,  \widehat{u}_m)$ are linearly independent.
 
+We can write the $\lambda$'s and $u$'s as a unique linear combination such that, 
+$$ \lambda_0 u_0 + \ldots + \lambda_n u_n = 0 $$
+
+Since this is true, the only value for $\sum_{i} \lambda_i$ is 0. We can rewrite this unique linear combination by subtracting $u_0$ from each $u_i$ to get $$\lambda_1 (u_1 - u_0) + \ldots + \lambda_n (u_n - u_0) + \sum_{i}^{n} (u_i + u_0) = 0$$ Since $\sum_{i} \lambda_i = 0$, the linear combination of the difference between $(u_i - u_0)$ is also linearly independent. \\
+
+The subset of a linearly independent set of vectors is also a linearly independent set, so $$\lambda_1 (u_1 - u_0) + \ldots + \lambda_m (u_m - u_0) + \sum_{i}^{m} (u_i + u_0) = 0$$ where $m \leq n$ is linearly independent. Since the difference between the subset of vectors are linearly independent, then $\sum_{i} \lambda_i = 0$ must be true. So $u_0$ can be added to $$\lambda_1 (u_1 - u_0) + \ldots + \lambda_m (u_m - u_0) + \sum_{i}^{m} (u_i + u_0) = 0$$ to get the linear combination, 
+
+$$\lambda_0 \hat{u}_0  + \lambda_1 \hat{u}_1  + \ldots + \lambda_m \hat{u}_m  + = 0$$ Since $\sum_{i} \lambda_i = 0$ is still true, then $\hat{u}_0, \ldots, \hat{u}_m$ are linearly independent.   
+
+
 \medskip
 (2) Prove that if  the $m + 1$ vectors
 $(\widehat{u}_0,  \ldots,  \widehat{u}_m)$ are linearly independent,
@@ -723,22 +733,36 @@ barycentric coordinates $(1 - (x_1 + \cdots + x_n ), x_1, \ldots,
 x_n)$ of $v$.
 
 \medskip
-(4) 
+(4) \\
 Let $(u_0, \ldots, u_n)$ be an affine frame $\in \mathbb{R} ^n$, and $(v_0, \ldots, v_n) \in \mathbb{R}^m$. There is a unique affine map $f: \mathbb{R} ^n \rightarrow \mathbb{R} ^m$ such that $f(u_i) = v_i\ \forall i = 0, \ldots,	n$. 
 
 Let $(u_0, \ldots, u_n)$ be a basis of $E \in \mathbb{R}^n$ and $(v_0, \ldots, v_n)$ be a basis for $F \in \mathbb{R}^m $. Let the affine map have the property that $f(u_i) = v_i\ \forall i = 0, \ldots,	n$. Because we have affine frame, every vector $u \in \mathbb{R}^n$ can be written uniquely as $u_0\lambda_0 + u_1\lambda_1 + \ldots + u_n\lambda_n$ where $\sum_i \lambda_i = 1$. \\
 
-We can write $f(u) = f(u_0\lambda_0 + u_1\lambda_1 + \ldots + u_n\lambda_n = lambda_0f(u_0) + lambda_1f(u_1) + \ldots + lambda_nf(u_n) = lambda_0v_0 + lambda_1v_1 + \ldots + lambda_nv_n$. So we can define a function $f: \mathbb{R} ^n \rightarrow \mathbb{R} ^m$ as above, such that $f(lambda_0u_0 + lambda_1u_1 + \ldots + lambda_nu_n) = lambda_0v_0 + lambda_1v_1 + \ldots + lambda_nv_n$. The function is unique, however we have to check if it is affine. 
+We can write $f(u) = f(u_0\lambda_0 + u_1\lambda_1 + \ldots + u_n\lambda_n = \lambda_0f(u_0) + \lambda_1f(u_1) + \ldots + \lambda_nf(u_n) = \lambda_0v_0 + \lambda_1v_1 + \ldots + \lambda_nv_n$. So we can define a function $f: \mathbb{R} ^n \rightarrow \mathbb{R} ^m$ as above, such that $f(\lambda_0u_0 + \lambda_1u_1 + \ldots + \lambda_nu_n) = \lambda_0v_0 + \lambda_1v_1 + \ldots + \lambda_nv_n$. The function is unique, however we have to check if it is affine. 
 
-To check if it is affine, we first pic $w_1, \ldots, w_p \in \mathbb{R}^n$ and a set of $\mu_1 + \ldots + \mu_p = 1$. We can write linear combination of $\mu$ and $w$, such that, 
+To check if it is affine, we first pick $w_1, \ldots, w_p \in \mathbb{R}^n$ and a set of $\mu_1 + \ldots + \mu_p = 1$. We can write linear combination of $\mu$ and $w$, such that, 
 $f(\mu_1 w_1 + \ldots + \mu_p w_p) = \mu_1 f(w_1) + \ldots + \mu_p f(w_p)$. Now we can rewrite all the $w$'s as the affine frame, such that, 
 
-$$w_1 = \sum_{i=0}^{n} \lambda_i \mu_i \ldots w_p = \sum_{i=0}^{n} \lambda_p \mu_p$$
+$$w_1 = \sum_{i=0}^{n} \lambda_i \mu_i, \ldots, w_p = \sum_{i=0}^{n} \lambda_p \mu_p$$
 
 Now we can expand and regroup in terms of the frame vectors. 
 
-% $$f(u_1(\sum_{i=0}^{n} \lamdba_{i}^{1} u_i)) + \ldots + u_p(\sum_{i=0}^{n} \lamdba_{i}^{p} u_i)) = f(\sum_{j=1}^{p})) $$ \\
+$$ f(u_1(\sum_{i=0}^{n} \lambda_{i}^{1} \mu_i)) + \ldots + u_p(\sum_{i=0}^{n} \lambda_{i}^{p} \mu_i)) = f((\sum_{j=1}^{p} \mu_j \lambda_{0}^{j}) u_0, \ldots, (\sum_{j=1}^{p} \mu_j \lambda_{n}^{j}) u_n) $$ 
 
+Now we take the coefficient out and set equal to 1, this works out because $sum_{i} \lambda_1 = 1$ and  $sum_{i} \mu_1 = 1$. 
+
+$$1 = (\sum_{j=1}^{p} \mu_j \lambda_{0}^{j}) v_0 + \ldots + (\sum_{j=1}^{p} \mu_j \lambda_{n}^{j}) v_n) $$
+
+Now regroup, 
+$$1 = \mu_1(\sum_{i=1}^{n} \lambda_{i}^{1} v_i) + \ldots + \mu_p(\sum_{i=1}^{n} \lambda_{i}^{n} v_i) $$ 
+
+Because of our original definition, $$w_1 = \sum_{i=0}^{n} \lambda_i \mu_i, \ldots, w_p = \sum_{i=0}^{n} \lambda_p \mu_p$$
+
+we can conclude that
+$$1 = \mu_1 f(w_1) + \ldots + \mu_p f(w_p)$$
+so $f$ is an affine combination.  
+ 
+ 
 
 \medskip
 (5)
