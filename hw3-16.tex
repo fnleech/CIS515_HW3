@@ -393,6 +393,27 @@ Conclude that with respect to the new origin $(c_1, c_2)$,
 the affine map $R_{\theta, (a_1,a_2)}$ becomes the 
 rotation $R_{\theta}$. We say that $R_{\theta, (a_1,a_2)}$ 
 is a {\it rotation of center $(c_1, c_2)$\/}.
+\vspace{0.25 cm}
+(2) 
+
+\[\begin{pmatrix} y'_1 + c_1\\y'_2 + c_2 \end{pmatrix} = \begin{pmatrix} cos\theta & -sin\theta \\ 
+sin\theta & cos\theta \end{pmatrix} \begin{pmatrix} x'_1 + c_1\\x'_2 + c_2 \end{pmatrix} + \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}\]
+
+\[y'_1 + \frac{1}{2}(a_1 - cot\frac{\theta}{2} a_2) =  cos\theta x'_1 + cos\theta (\frac{1}{2}(a_1 - cot \frac{\theta}{2} a_2)) - sin\theta x'_2 - sin\theta (\frac{1}{2} (cot \frac{\theta}{2}a_1 + a_2)) + a_1 \]
+
+$$ = cos\theta x'_1  - sin\theta x'_2 + (\frac {cos\theta}{2} + 1 - (\frac{sin\theta cot \frac{\theta}{2}}{2} ))a_1 - \frac{1}{2}(cos\theta cot \frac{\theta}{2} + sin\theta) a_2$$
+
+Using $cos\theta - sin\theta cot \frac{\theta}{2} = -1$ and $cos\theta cot \frac{\theta}{2} + sin\theta = cot \frac{\theta}{2}$, the $\frac{1}{2} (a_1 - cot \frac{\theta}{2}a_2)$ cancel out from both sides of the equation and then $$y'_1 = cos\theta x'_1 - sin\theta x'_2$$.
+
+$$y'_2 + c_2 = sin\theta (x'_1+ c_1) + cos\theta (x'_2 +c_2) + a_2$$
+
+By substituting $\frac{1}{2} \left( cot \frac{\theta}{2} a_1+a_2 \right)$ for $c_2$ and $\frac{1}{2} \left( -cot \frac{\theta}{2} a_2+a_1 \right)$ for $c_1$, we get\\ 
+
+ $$y'_2 = sin\theta x'_1 + cos\theta x'_2$$
+ 
+ Thus, the original affine map becomes 
+ 
+ $$ \begin{pmatrix}y'_1 \\y'_2\end{pmatrix}= R_\theta \begin{pmatrix}x'_1 \\x'_2\end{pmatrix}$$
 
 \medskip
 (3)
