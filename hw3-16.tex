@@ -87,20 +87,41 @@ $v_1 = -v_1$ can only have this if $v_1 = -v_1 = 0$.
 
 \medskip
 (3)
-If $E$ is finite-dimensional and $f$ is an involution, prove that
-there is some basis of $E$ over which the matrix of $f$ is of the form
-\[
-I_{k , n - k} =
+Let the basis of $E$ be $(\xi_i), i = 1, 2, \cdots, n$, where $\xi_i = 
 \begin{pmatrix}
-I_k & 0 \\
-0 & - I_{n - k}
-\end{pmatrix},
-\]
-where $I_k$ is the $k\times k$ identity matrix 
-(similarly for $I_{n -  k}$) and $k = \mathrm{dim}(E_1)$.
-Can you give a geometric interpretation of the action of $f$
-(especially when   $k = n - 1$)?
-
+0 \\
+0 \\
+\vdots \\
+1_i \\
+0 \\
+\vdots \\
+0 \\
+\end{pmatrix}
+$.Define \\
+$
+f(\xi_i) = \left \{
+				\begin{array}{ll}
+				\xi_i \; i = 1,2,\cdots,k \\
+				-\xi_i \; i = k+1, k+2, \cdots, n				
+				\end{array}
+			\right.
+$. Then $\forall u \in E$, we can write as $u = \sum_i \lambda_i \xi_i$ and $f(u) = 
+\begin{pmatrix}
+\xi_1 \\
+\xi_2 \\
+\vdots \\
+\xi_k \\
+-\xi_{k+1} \\
+-\xi_{k+2} \\
+\vdots \\
+-\xi_n
+\end{pmatrix} 
+= I_{k , n - k} \cdot u
+$. 
+And $
+(f \circ f)(u) = I_{k , n - k}I_{k , n - k}  I_{k , n - k}  u = I u = u
+$. Thus $f$ is an involution.\\
+Geometric interpretation of the action of $f$ is that $f(u)$ is the reflection of $u$ in some axises. When $k = n - 1$, we can easily find that $f(u)$ differs from $u$ only in the last entry $f(u)_i = -u_i$, so it is the reflection across the $n^{th}$ axis.
 
 \vspace {0.5cm}\noindent
 {\bf Problem B3 (50 pts).}
@@ -155,8 +176,8 @@ $R_{-\theta}$.
 \[
 =
 \begin{pmatrix}
-(\cos\theta \cdot \cos(-theta)) \cdot (-\sin\theta \sin(-\theta)) & -\cos(\theta)0 \\
-\sin(\theta)cos(-theta)+cos\theta \sin(-\theta) & 1\cos(1)
+(\cos\theta \cdot \cos(-\theta)) \cdot (-\sin\theta \sin(-\theta)) & -\cos(\theta)0 \\
+\sin(\theta)cos(-\theta)+cos\theta \sin(-\theta) & 1\cos(1)
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -165,17 +186,33 @@ $R_{-\theta}$.
 \end{pmatrix}
 \]
 
-
-
 \medskip
-(3) For any two rotations $R_{\alpha}$ and $R_{\beta}$, prove that
-\[
-R_{\beta}\circ R_{\alpha} = R_{\alpha}\circ R_{\beta} = R_{\alpha + \beta}.
-\]
-
-Use (2)-(3) to prove that the rotations in the plane form a commutative
-group
-denoted $\mathbf{SO}(2)$.
+(3) Because $
+\cos(\alpha + \beta) = \cos \alpha \cos \beta  - \sin \alpha \sin \beta,
+\sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta
+$, we have 
+\begin{align*}
+R_{\alpha} \circ R_{\beta} &= 
+\begin{pmatrix}
+\cos\alpha & -\sin\alpha \\
+\sin\alpha & \cos\alpha
+\end{pmatrix} 
+\cdot
+\begin{pmatrix}
+\cos\beta & -\sin\beta \\
+\sin\beta & \cos\beta
+\end{pmatrix} \\
+&= R_{\beta} \circ R_{\alpha} 
+= R_{\alpha + \beta}
+\end{align*}
+We can get 
+\begin{align*}
+&1. (R_{\alpha} \circ R_{\beta}) \circ R_{\gamma} = R_{\alpha + \beta + \gamma} = R_{\alpha} \circ (R_{\beta} \circ R_{\gamma}) \\
+&2. R_{\alpha} \circ I = I \circ R_{\alpha} = R_{\alpha} \\
+&3. R_{\alpha} \circ R_{-\alpha} = I \\
+&4. R_{\alpha} \circ R_{\beta} = R_{\alpha + \beta} = R_{\beta} \circ R_{\alpha}
+\end{align*}
+So rotations in the plane form a commutative group.
 
 \vspace {0.5cm}\noindent
 {\bf Problem B4 (110 pts).}
@@ -458,10 +495,9 @@ $\mathrm{dim}(U)$ of $U$.
 
 \medskip
 (1)
-If $\s{A} = a + U$, 
-why is $a\in \s{A}$?
-
-\medskip
+Because $U$ is a subspace of $\reals^n$, then $0 \in U$, we have $
+a + 0 \in \s{A}$
+\medskip \\
 What are affine subspaces of dimension $0$?
 What are affine subspaces of dimension $1$ (begin with $\reals^2$)?
 What are affine subspaces of dimension $2$ (begin with $\reals^3$)?
@@ -471,51 +507,20 @@ Prove that any nonempty affine subspace is closed under affine
 combinations.
 
 \medskip
-(2) Prove that if $\s{A} = a + U$ is any nonempty affine subspace, then
-$\s{A} = b + U$ for any $b\in \s{A}$.
+(2) At least from (1) we know $a \in \s{A}$, $\s{A}$ is not empty.
+For any $b \in \s{A}$, we can find $u$, write as $b = a + u$. Then   $b - a \in U$, $a + U = a + b - a + U = b + U$.
 
 \medskip
 (3)
-Let $\s{A}$ be any nonempty subset of $\reals^n$ closed under affine
-combinations.
-For any $a\in \s{A}$, prove that 
-\[
-U_a = \{x - a \in \reals^n \mid x\in \s{A}\} 
-\]
-is a (linear) subspace of $\reals^n$ such that
-\[
-\s{A} = a + U_a.
-\]
-Prove that $U_a$ does not depend on the choice of $a \in \s{A}$; that
-is, $U_a = U_b$ for all $a, b\in \s{A}$. In fact, prove that
-\[
-U_a = U = \{y - x \in \reals^n \mid x, y\in \s{A}\},\quad
-\hbox{for all $a\in \s{A}$},
-\]
-and so
-\[
+Choose $x - a \in U_a$, $y - a \in U_a$, $\lambda, \mu \in \reals$, then compute $\lambda (x - a) + \mu (y - a) = \frac{1}{\lambda + \mu}(\frac{\lambda}{\lambda + \mu}(x - a) + \frac{\mu}{\lambda + \mu}(y - a)) = \frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y - a$. Because $\s{A}$ is closed under affine combinations, we have $\frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y \in \s{A}$, then $\lambda (x - a) + \mu (y - a) = \frac{\lambda}{\lambda + \mu} x + \frac{\mu}{\lambda + \mu} y - a \in \reals^n$, $U_a$ is a subspace of $\reals^n$.\\
+For any $u \in U_a$, we can write as $u = x - a = x + (b - a) - b$. The sum of coefficients of $x, b, a$ is $1 -1 + 1 = 1$, and $\s{A}$ is closed under affine combinations, then $u = x + (b -a)-b \in \s{A} - b \Rightarrow u \in U_b$. $U_a$ does not depend on the choice of $a \in \s{A}$, $U_a = U_b$ for all $a, b\in \s{A}$.
+So $U_a = U = \{y - x \in \reals^n \mid x, y \in \s{A}\}$ and
+$
 \s{A} = a + U, \quad\hbox{for any $a\in \s{A}$}.
-\]
+$
 
 \medskip
-
-\remark
-The subspace $U$ is called the {\it direction\/} of $\s{A}$.
-
-\medskip
-(4)
-Two nonempty affine subspaces $\s{A}$ and $\s{B}$ are said to be {\it
-  parallel\/} iff they have the same direction. Prove that that if
-$\s{A} \not= \s{B}$ and $\s{A}$ and $\s{B}$ are parallel, then
-$\s{A}\cap \s{B} = \emptyset$.
-
-\medskip
-
-\remark
-The above shows that
-affine subspaces behave quite differently from linear subspaces.
-
-
+(4)If $\s{A}\cap \s{B} = (x)$, then we can find $x = a + u = b + v$ where $a \in \s{A}, b \in \s{B}$, $u, v \in U$. Write $b = a + u - v$, thus $b \in \s{A} \Rightarrow \s{A} = \s{B}$, which is against $\s{A} \neq \s{B}$. We have $\s{A} \cap \s{B} = \emptyset$ if $\s{A} \neq \s{B}$ and they are parallel. 
 
 \vspace {0.25cm}\noindent
 {\bf Problem B6 (120 pts).} (Affine frames and affine maps)
@@ -639,7 +644,7 @@ $$w_1 = \sum_{i=0}^{n} \lambda_i \mu_i \ldots w_p = \sum_{i=0}^{n} \lambda_p \mu
 
 Now we can expand and regroup in terms of the frame vectors. 
 
-$$f(u_1(\sum_{i=0}^{n} \lamdba_{i}^{1} u_i)) + \ldots + u_p(\sum_{i=0}^{n} \lamdba_{i}^{p} u_i)) = f((\sum_{j=1}^{p} \
+% $$f(u_1(\sum_{i=0}^{n} \lamdba_{i}^{1} u_i)) + \ldots + u_p(\sum_{i=0}^{n} \lamdba_{i}^{p} u_i)) = f(\sum_{j=1}^{p})) $$ \\
 
 
 \medskip
