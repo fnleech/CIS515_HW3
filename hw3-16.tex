@@ -1,6 +1,10 @@
 \documentclass[12pt]{article}
 \usepackage{amsfonts,amssymb,amsmath}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
 %\documentstyle[12pt,amsfonts]{article}
 %\documentstyle{article}
 
@@ -21,6 +25,26 @@
 
 %
 \begin{document}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
 \begin{center}
 \fbox{{\Large\bf Fall 2016 \hspace*{0.4cm} CIS 515}}\\
 \vspace{1cm}
@@ -426,6 +450,7 @@ $$b_2 = \sin \theta a_1 - \cos \theta a_1$$
 \medskip
 (5)
 
+<<<<<<< Updated upstream
 $R_{\beta,(b_1,b_2)}:$
 
 $$\begin{pmatrix}
@@ -495,6 +520,23 @@ sin(\alpha + \beta) & cos(\alpha + \beta) &sin\alpha b_1 + cos\alpha b_2 \\
 0&0&1
 \end{pmatrix}$$
  so generally, $$R_{\beta,(b_1,b_2)} \circ R_{\alpha} \ne R_\alpha \circ R_{\beta,(b_1,b_2)}$$ 
+=======
+Use (4)-(5) to show that the affine maps of the plane defined in this
+problem form a nonabelian group denoted $\mathbf{SE}(2)$.
+
+\medskip
+Prove that  $R_{\beta, (b_1,b_2)} \circ R_{\alpha, (a_1,a_2)}$ is
+not a translation (possibly the identity)  iff
+$\alpha + \beta \not= k 2\pi$, for all  $k\in \integs$.
+Find its center of rotation when $(a_1, a_2) = (0, 0)$.  
+
+\medskip
+If $\alpha + \beta = k 2\pi$, then  $R_{\beta, (b_1,b_2)} \circ
+R_{\alpha, (a_1,a_2)}$
+is a pure translation. 
+Find the translation vector 
+of $R_{\beta, (b_1,b_2)} \circ R_{\alpha, (a_1,a_2)}$.
+>>>>>>> Stashed changes
 
 
 \vspace {0.5cm}\noindent
@@ -567,6 +609,7 @@ If $m = n$,  we say that $n + 1$ affinely independent
 vectors  $(u_0, u_1, \ldots, u_{n })$ form an {\it affine frame\/} of $\reals^n$. 
 
 \medskip
+<<<<<<< Updated upstream
 (3) Because $(u_0, u_1, \ldots, u_{n })$ is an affine frame of $\reals^n$, then from above we can get a basis in $\reals^{n+1}$, which is $\widehat{u}_0, \ldots,  \widehat{u}_{n}$. For any $v \in \reals^n$, we denote $\widehat{v} = (v, 1)$, then it can be uniquely written as the combination of $(\widehat{u}_i)$, such that $\widehat{v} = \sum_i \lambda_i \widehat{u}_i$. From the last row of equation, we know there should be $\sum_i \lambda_i = 1$. Along with $v = \sum_i \lambda_i u_i$, we can get the conclusion.\\
 \medskip
 From $e_i = u_i -  u_0$, for $i = 1, \ldots, n$, substitute $u_i$ with $e_i$, we get $v = \sum_{i=1}^n \lambda_i (e_i + u_0) + \lambda_0 u_0 = \sum_i \lambda_i u_0 + \sum_{i=1}^n \lambda_i e_i = u_0 + \sum_{i=1}^n \lambda_i e_i$.
@@ -582,6 +625,83 @@ From above, for any $v\in \reals^n$, there is $v = u_0 + x_1 e_1 + \dots + x_n e
 \[
 v = (1 - (x_1 + \cdots + x_x)) u_0 + x_1 u_1 + \cdots + x_n u_n,
 \]
+=======
+(3) if $(u_0, u_1, \ldots, u_{n })$ is an affine frame of $\reals^n$,
+then prove that for every vector $v\in \reals^n$,  
+there is a unique $(n + 1)$-tuple
+$(\lambda_0, \lambda_1, \ldots, \lambda_n)\in \reals^{n + 1}$, with
+$\lambda_0 + \lambda_1 + \cdots + \lambda_n = 1$, such that
+\[
+v = \lambda_0 u_0 + \lambda_1 u_1 + \cdots + \lambda_n u_n.
+\]
+The scalars $(\lambda_0, \lambda_1, \ldots, \lambda_n)$ are called the
+{\it barycentric\/} (or {\it affine\/}) {\it coordinates\/} of $v$
+w.r.t. the affine frame   $(u_0, u_1, \ldots, u_{n })$.
+
+
+(3.1) \\
+\medskip
+If we write $e_i = u_i -  u_0$, for $i = 1, \ldots, n$, then prove that
+we have
+\[
+v = u_0 + \lambda_1 e_1 + \cdots + \lambda_n e_n,
+\]
+and since $(e_1, \ldots, e_n)$ is a basis of $\reals^n$ (by (1) \&
+(2)), the $n$-tuple $(\lambda_1, \ldots, \lambda_n)$ consists of the 
+standard coordinates of $v - u_0$ over the basis $(e_1, \ldots, e_n)$.
+
+(3.2) \\
+From above, where $$ \hat{v} = \lambda_0 \hat{u}_0 + \lambda_1 \hat{u}_1 + \ldots + \lambda_n \hat{n}_0$$ are linearly independent. We can rewrite above as, $$\hat{v} = \lambda_1(\hat{u}_1 - \hat{u}_0) + \lambda_2(\hat{u}_2 - \hat{u}_0) + \ldots + \lambda_n(\hat{u}_n - \hat{u}_0) + \sum_{i}^{n} \lambda_i u_0$$
+We can replace each $u_i -  u_0$ with $e_i$ such that $e_i = u_i -  u_0$. Now, 
+$$\hat{v} = \lambda_1(e_1) + \lambda_2(e_2) + \ldots + \lambda_n(e_n) + \sum_{i}^{n} \lambda_i u_0$$
+ 
+
+From $6.1$, we know that the subset of a linearly independent set is linearly independent. Thus the first $n-1$ is linearly independent, so the $\sum_{i}^{n-1} \lambda_i = 0$. The last $nth$ term in the equation, $\sum_{i}^{n} \lambda_i u_0$ must equal 0. Since the $u_0$ is unique, the $\lambda_i$'s must equal 0. 
+ 
+
+
+\medskip
+Conversely, for any vector $u_0\in \reals^n$ and for any basis
+$(e_1, \ldots, e_n)$ of $\reals^n$, let
+$u_i = u_0 + e_i$ for $i = 1, \ldots, n$. Prove
+that $(u_0, u_1, \ldots, u_n)$ is an affine frame of $\reals^n$, 
+and for any $v\in \reals^n$, if  
+\[
+v = u_0 + x_1 e_1 + \dots + x_n e_n,
+\]
+with $(x_1, \ldots, x_n) \in \reals^n$ (unique), then
+\[
+v = (1 - (x_1 + \cdots + x_x)) u_0 + x_1 u_1 + \cdots + x_n u_n,
+\]
+so that $(1 - (x_1 + \cdots + x_x)), x_1, \cdots,  x_n)$,
+are the barycentric coordinates of $v$ w.r.t. the affine frame
+$(u_0, u_1, \ldots, u_n)$.
+
+(3.3) \\
+
+\medskip
+The above shows that there is a one-to-one correspondence between
+affine frames $(u_0, \ldots$, $u_n)$ and pairs
+$(u_0, (e_1, \ldots, e_n))$, with  $(e_1, \ldots, e_n)$  a basis.
+Given  an affine frame  $(u_0, \ldots, u_n)$, we obtain the basis
+$(e_1, \ldots, e_n)$ with $e_i = u_i - u_0$, for $i = 1, \ldots, n$;
+given the pair $(u_0, (e_1, \ldots$, $e_n))$ where  $(e_1, \ldots, e_n)$
+is a basis,  we obtain the affine frame   $(u_0, \ldots, u_n)$, with
+$u_i = u_0 + e_i$, for $i = 1, \ldots, n$.
+There is also a  one-to-one correspondence between
+barycentric coordinates w.r.t. the affine frame
+$(u_0, \ldots, u_n)$ and standard coordinates w.r.t.
+the basis   $(e_1, \ldots, e_n)$.
+The barycentric cordinates $(\lambda_0, \lambda_1, \ldots, \lambda_n)$
+of $v$
+(with $\lambda_0 + \lambda_1 + \cdots + \lambda_n = 1$) 
+yield the standard coordinates $(\lambda_1, \ldots, \lambda_n)$ of $v - u_0$;
+the standard coordinates $(x_1, \ldots, x_n)$ of $v - u_0$ yield the 
+barycentric coordinates $(1 - (x_1 + \cdots + x_n ), x_1, \ldots,
+x_n)$ of $v$.
+
+\medskip
+>>>>>>> Stashed changes
 (4) \\
 We can write $f(u) = f(u_0\lambda_0 + u_1\lambda_1 + \ldots + u_n\lambda_n) = \lambda_0f(u_0) + \lambda_1f(u_1) + \ldots + \lambda_nf(u_n) = \lambda_0v_0 + \lambda_1v_1 + \ldots + \lambda_nv_n$. So we can define a function $f: \mathbb{R} ^n \rightarrow \mathbb{R} ^m$ as above, such that $f(\lambda_0u_0 + \lambda_1u_1 + \ldots + \lambda_nu_n) = \lambda_0v_0 + \lambda_1v_1 + \ldots + \lambda_nv_n$. The function is unique, however we have to check if it is affine. 
 
@@ -792,6 +912,15 @@ First we need to prove that for any $x \in \reals^n$, $Px$ is the closest vector
 Then what we only need to do is to prove $V^0 = U$. Choose $u \in U$, from above we know $\transpos{A} u = 0$, thus any $Ax \in V$ we have $\transpos{(Ax)} y = \transpos{x} \transpos{A} y = 0 \Rightarrow U \subseteq V^0$. For any $v \in V^0$, we have $\transpos {(A x )} v = \transpos{x} \transpos{A} v = 0$, because we can choose any $x \in \reals^n$, then must have the result $\transpos{A}x = 0 \Rightarrow V^0 \subseteq U$. (Otherwise we can construct $(e_i) \; i = 1,2,\cdots n$ and then $\transpos{(e_1, e_2, \cdots e_n)} \transpos{A} v  = I \cdot \transpos{A} v = 0$). As a conclusion $U = V^0 \Rightarrow \reals^n =  V^0 \oplus V = U \oplus V$.
 
 \vspace{0.5cm}\noindent
-{\bf TOTAL:  460 points.}
+{\bf TOTAL:  460 points.} \\
+
+{\bf APPENDIX} \\
+
+Problem 3.3 Code
+\lstinputlisting{Problem3.m}
+
+
+
+
 
 \end{document}
