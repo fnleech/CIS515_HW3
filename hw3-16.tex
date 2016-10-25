@@ -323,19 +323,13 @@ By substituting $\frac{1}{2} \left( cot \frac{\theta}{2} a_1+a_2 \right)$ for $c
 
 \medskip
 (3)
-Use {\tt Matlab} to show the action of  the affine map
-$R_{\theta, (a_1,a_2)}$ on a simple figure such as
-a triangle or a rectangle,
-for $\theta = \pi/3$ and various values of $(a_1, a_2)$.
-Display the center $(c_1, c_2)$ of the rotation.
+We showed the action of the affine map $R_{\theta, (a_1,a_2)}$ on a triangle for  $\theta = \pi/3$ and various values of $(a_1, a_2)$. The code is included in our Appendix. 
 
 \includegraphics[scale=.25]{Plot4_3}
 
 
 \medskip
-What kind of transformations correspond to
-$\theta= k 2\pi$, with $k \in \integs$?
-The four centers of rotation in the figure are represented by *.\\
+The 9 centers of rotation in the figure are represented by *.\\
 When $\theta = k2\pi$, we have $cos\theta=1$ and $sin\theta=0$, 
 so $y_1 = x_1 + a_1$ and $y_2=x_2 + a_2$ and this indicates the transformation is a translation.
 
@@ -452,8 +446,6 @@ $$b_2 = \sin \theta a_1 - \cos \theta a_1$$
 
 \medskip
 (5)
-
-<<<<<<< Updated upstream
 $R_{\beta,(b_1,b_2)}:$
 
 $$\begin{pmatrix}
@@ -528,18 +520,6 @@ Use (4)-(5) to show that the affine maps of the plane defined in this
 problem form a nonabelian group denoted $\mathbf{SE}(2)$.
 
 \medskip
-Prove that  $R_{\beta, (b_1,b_2)} \circ R_{\alpha, (a_1,a_2)}$ is
-not a translation (possibly the identity)  iff
-$\alpha + \beta \not= k 2\pi$, for all  $k\in \integs$.
-Find its center of rotation when $(a_1, a_2) = (0, 0)$.  
-
-\medskip
-If $\alpha + \beta = k 2\pi$, then  $R_{\beta, (b_1,b_2)} \circ
-R_{\alpha, (a_1,a_2)}$
-is a pure translation. 
-Find the translation vector 
-of $R_{\beta, (b_1,b_2)} \circ R_{\alpha, (a_1,a_2)}$.
->>>>>>> Stashed changes
 Since we show that $R_{\beta,(b_1,b_2)} \circ R_{\alpha} \ne R_{\alpha} \circ R_{\beta,(b_1,b_2)}$, the commutative property does not hold so the maps form a nonabelian group.\\
 
 When $\alpha + \beta = k2\pi$, $R_{\beta,(b_1,b_2)} \circ R_{\alpha,(a_1,a_2)}$ is a translation since $cos(\alpha + \beta)= 1$ and $sin(\alpha + \beta)=0$ so the map corresponding to $R_{\beta,(b_1,b_2)} \circ R_{\alpha,(a_1,a_2)}$ becomes:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 OCT 2016 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  25 OCT 2016 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,123 +340,136 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--317
 [5] <Plot4_3.jpg, id=30, 1124.2pt x 843.15pt>
 File: Plot4_3.jpg Graphic file (type jpg)
  <use Plot4_3.jpg>
-Package pdftex.def Info: Plot4_3.jpg used on input line 332.
+Package pdftex.def Info: Plot4_3.jpg used on input line 328.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 [6 <./Plot4_3.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--432
+Underfull \hbox (badness 10000) in paragraph at lines 422--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--437
+Underfull \hbox (badness 10000) in paragraph at lines 427--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--448
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
 
  []
 
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 575--578
+Underfull \hbox (badness 10000) in paragraph at lines 531--538
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 576--579
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
 
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
 
  []
 
 [12] [13]
-Overfull \hbox (11.54453pt too wide) in paragraph at lines 841--841
+Overfull \hbox (11.54453pt too wide) in paragraph at lines 842--842
 [] 
  []
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 845.
+LaTeX Warning: Command \i invalid in math mode on input line 846.
 
 [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 917--919
+Underfull \hbox (badness 10000) in paragraph at lines 918--920
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 920--921
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
 
  []
 
-(./Problem3.m
+[16] (./Problem3.m
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
-
-[16] [17]) (./Problem4.m [18]) [19] (./hw3-16.aux) ) 
+ [17]) (./Problem4.m [18]) [19] (./hw3-16.aux) ) 
 Here is how much of TeX's memory you used:
- 4773 strings out of 493014
- 61129 string characters out of 6133351
- 267720 words of memory out of 5000000
- 8246 multiletter control sequences out of 15000+600000
- 10586 words of font info for 40 fonts, out of 8000000 for 9000
+ 4771 strings out of 493014
+ 61108 string characters out of 6133351
+ 260720 words of memory out of 5000000
+ 8245 multiletter control sequences out of 15000+600000
+ 10417 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,40p,671b,1979s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw3-16.pdf (19 pages, 300805 bytes).
+</usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb>
+Output written on hw3-16.pdf (19 pages, 297974 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
