@@ -515,9 +515,6 @@ sin(\alpha + \beta) & cos(\alpha + \beta) &sin\alpha b_1 + cos\alpha b_2 \\
 0&0&1
 \end{pmatrix}$$
  so generally, $$R_{\beta,(b_1,b_2)} \circ R_{\alpha} \ne R_\alpha \circ R_{\beta,(b_1,b_2)}$$ 
-=======
-Use (4)-(5) to show that the affine maps of the plane defined in this
-problem form a nonabelian group denoted $\mathbf{SE}(2)$.
 
 \medskip
 Since we show that $R_{\beta,(b_1,b_2)} \circ R_{\alpha} \ne R_{\alpha} \circ R_{\beta,(b_1,b_2)}$, the commutative property does not hold so the maps form a nonabelian group.\\
@@ -599,11 +596,16 @@ If $m = n$,  we say that $n + 1$ affinely independent
 vectors  $(u_0, u_1, \ldots, u_{n })$ form an {\it affine frame\/} of $\reals^n$. 
 
 \medskip
-<<<<<<< Updated upstream
-(3) Because $(u_0, u_1, \ldots, u_{n })$ is an affine frame of $\reals^n$, then from above we can get a basis in $\reals^{n+1}$, which is $\widehat{u}_0, \ldots,  \widehat{u}_{n}$. For any $v \in \reals^n$, we denote $\widehat{v} = (v, 1)$, then it can be uniquely written as the combination of $(\widehat{u}_i)$, such that $\widehat{v} = \sum_i \lambda_i \widehat{u}_i$. From the last row of equation, we know there should be $\sum_i \lambda_i = 1$. Along with $v = \sum_i \lambda_i u_i$, we can get the conclusion.\\
+(3) \\
+(3.1) \\
+\medskip
+Because $(u_0, u_1, \ldots, u_{n })$ is an affine frame of $\reals^n$, then from above we can get a basis in $\reals^{n+1}$, which is $\widehat{u}_0, \ldots,  \widehat{u}_{n}$. For any $v \in \reals^n$, we denote $\widehat{v} = (v, 1)$, then it can be uniquely written as the combination of $(\widehat{u}_i)$, such that $\widehat{v} = \sum_i \lambda_i \widehat{u}_i$. From the last row of equation, we know there should be $\sum_i \lambda_i = 1$. Along with $v = \sum_i \lambda_i u_i$, we can get the conclusion.\\
 \medskip
 From $e_i = u_i -  u_0$, for $i = 1, \ldots, n$, substitute $u_i$ with $e_i$, we get $v = \sum_{i=1}^n \lambda_i (e_i + u_0) + \lambda_0 u_0 = \sum_i \lambda_i u_0 + \sum_{i=1}^n \lambda_i e_i = u_0 + \sum_{i=1}^n \lambda_i e_i$.
-When $u_i = u_0 + e_i$ for $i = 1, \ldots, n$, denote the vector $\widehat{u_i} = (u_0 + e_i, 1)$. Suppose $\sum_i \lambda_i \widehat{u_i} = 0$, such that
+When $u_i = u_0 + e_i$ for $i = 1, \ldots, n$, denote the vector $\widehat{u_i} = (u_0 + e_i, 1)$. 
+
+(3.2) \\
+Suppose $\sum_i \lambda_i \widehat{u_i} = 0$, such that
 \begin{align*}
 \sum_i \lambda_i u_0 + \sum_i \lambda_i e_i &= 0 \\
 \sum_i \lambda_i  &= 0 \\ 
@@ -615,40 +617,7 @@ From above, for any $v\in \reals^n$, there is $v = u_0 + x_1 e_1 + \dots + x_n e
 \[
 v = (1 - (x_1 + \cdots + x_x)) u_0 + x_1 u_1 + \cdots + x_n u_n,
 \]
-=======
-(3) if $(u_0, u_1, \ldots, u_{n })$ is an affine frame of $\reals^n$,
-then prove that for every vector $v\in \reals^n$,  
-there is a unique $(n + 1)$-tuple
-$(\lambda_0, \lambda_1, \ldots, \lambda_n)\in \reals^{n + 1}$, with
-$\lambda_0 + \lambda_1 + \cdots + \lambda_n = 1$, such that
-\[
-v = \lambda_0 u_0 + \lambda_1 u_1 + \cdots + \lambda_n u_n.
-\]
-The scalars $(\lambda_0, \lambda_1, \ldots, \lambda_n)$ are called the
-{\it barycentric\/} (or {\it affine\/}) {\it coordinates\/} of $v$
-w.r.t. the affine frame   $(u_0, u_1, \ldots, u_{n })$.
-
-
-(3.1) \\
-\medskip
-If we write $e_i = u_i -  u_0$, for $i = 1, \ldots, n$, then prove that
-we have
-\[
-v = u_0 + \lambda_1 e_1 + \cdots + \lambda_n e_n,
-\]
-and since $(e_1, \ldots, e_n)$ is a basis of $\reals^n$ (by (1) \&
-(2)), the $n$-tuple $(\lambda_1, \ldots, \lambda_n)$ consists of the 
-standard coordinates of $v - u_0$ over the basis $(e_1, \ldots, e_n)$.
-
-(3.2) \\
-From above, where $$ \hat{v} = \lambda_0 \hat{u}_0 + \lambda_1 \hat{u}_1 + \ldots + \lambda_n \hat{n}_0$$ are linearly independent. We can rewrite above as, $$\hat{v} = \lambda_1(\hat{u}_1 - \hat{u}_0) + \lambda_2(\hat{u}_2 - \hat{u}_0) + \ldots + \lambda_n(\hat{u}_n - \hat{u}_0) + \sum_{i}^{n} \lambda_i u_0$$
-We can replace each $u_i -  u_0$ with $e_i$ such that $e_i = u_i -  u_0$. Now, 
-$$\hat{v} = \lambda_1(e_1) + \lambda_2(e_2) + \ldots + \lambda_n(e_n) + \sum_{i}^{n} \lambda_i u_0$$
  
-
-From $6.1$, we know that the subset of a linearly independent set is linearly independent. Thus the first $n-1$ is linearly independent, so the $\sum_{i}^{n-1} \lambda_i = 0$. The last $nth$ term in the equation, $\sum_{i}^{n} \lambda_i u_0$ must equal 0. Since the $u_0$ is unique, the $\lambda_i$'s must equal 0. 
- 
-
 
 \medskip
 Conversely, for any vector $u_0\in \reals^n$ and for any basis
@@ -691,7 +660,6 @@ barycentric coordinates $(1 - (x_1 + \cdots + x_n ), x_1, \ldots,
 x_n)$ of $v$.
 
 \medskip
->>>>>>> Stashed changes
 (4) \\
 We can write $f(u) = f(u_0\lambda_0 + u_1\lambda_1 + \ldots + u_n\lambda_n) = \lambda_0f(u_0) + \lambda_1f(u_1) + \ldots + \lambda_nf(u_n) = \lambda_0v_0 + \lambda_1v_1 + \ldots + \lambda_nv_n$. So we can define a function $f: \mathbb{R} ^n \rightarrow \mathbb{R} ^m$ as above, such that $f(\lambda_0u_0 + \lambda_1u_1 + \ldots + \lambda_nu_n) = \lambda_0v_0 + \lambda_1v_1 + \ldots + \lambda_nv_n$. The function is unique, however we have to check if it is affine. 
 
@@ -718,7 +686,6 @@ $$1 = \mu_1 f(w_1) + \ldots + \mu_p f(w_p)$$
 so $f$ is an affine combination.  
  
  
-
 \medskip
 (5)
 Let $(a_0, \ldots, a_n)$ be any affine frame in $\reals^n$ and
