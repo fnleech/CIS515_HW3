@@ -69,7 +69,7 @@ $(1)\ e = e + 0$ where $e \in U_1$ and $0 \in U_2$ and  \\
 
 $(2)\ e = 0 + 0$ where $0 \in U_1$ and $e \in U_2$.  \\ 
 
-But $e = u_{11} + u_{21}$ is unique, so $e=0$. Since $E = U_1 + U_P$, we will check uniqueness. Suppose $e = u_{11} + u_{21}$ and $e = u_{12} + u_{22}$ where $u_{11} , u_{12}  \in U_1$ and $u_{21} , u_{22}  \in U_2$. Then $u_{11} + u_{21} = u_{12} + u{22}$, so $u_{11} - u_{12} = u_{22} - u_{21}$.  Let $x$ be a vector such that $x = u_{11} - u_{12} = u_{22} - u_{21}$. Then $x \in U_1$ and $x \in U_2$, and $u_{11} = u_{12}$ and $u_{22} = u_{21}$, so $x \in U_1 \cap U_2 = (0)$. \\
+But $e = u_{11} + u_{21}$ is unique, so $e=0$. Since $E = U_1 + U_P$, we will check uniqueness. Suppose $e = u_{11} + u_{21}$ and $e = u_{12} + u_{22}$ where $u_{11} , u_{12}  \in U_1$ and $u_{21} , u_{22}  \in U_2$. Then $u_{11} + u_{21} = u_{12} + u_{22}$, so $u_{11} - u_{12} = u_{22} - u_{21}$.  Let $x$ be a vector such that $x = u_{11} - u_{12} = u_{22} - u_{21}$. Then $x \in U_1$ and $x \in U_2$, and $u_{11} = u_{12}$ and $u_{22} = u_{21}$, so $x \in U_1 \cap U_2 = (0)$. \\
 
 Now by induction we can extend our logic for any number of $p\geq 2$  subspaces of some vector space $E$. 
 
@@ -153,6 +153,8 @@ Geometric interpretation of the action of $f$ is that $f(u)$ is the reflection o
 
 \medskip
 (1)\\
+Here we graphed the action of rotation with 4 $\theta$ values. The code for the graphic is included in the Appendix.
+
 \includegraphics[scale=.25]{RotationPlot}
 
 \medskip
@@ -172,20 +174,21 @@ Geometric interpretation of the action of $f$ is that $f(u)$ is the reflection o
 \[
 =
 \begin{pmatrix}
-\cos(1) & -\sin(1) \\
-\sin(1) & \cos(1)
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
 \end{pmatrix}
 \cdot
 \begin{pmatrix}
-\cos(-1) & -\sin(-1) \\
-\sin(-1) & \cos(-1)
+\cos(\theta) & \sin(\theta) \\
+-\sin(\theta) & \cos(\theta)
 \end{pmatrix}
 \]
 \[
 =
 \begin{pmatrix}
-(\cos\theta \cdot \cos(-\theta)) \cdot (-\sin\theta \sin(-\theta)) & -\cos(\theta)0 \\
-\sin(\theta)cos(-\theta)+cos\theta \sin(-\theta) & 1\cos(1)
+(\cos\theta \cdot \cos(-\theta))  (-\sin \theta \sin(-\theta)) & -\cos(\theta)\sin(\theta) - \sin(\theta)\cos(\theta) \\
+\sin(\theta)cos(-\theta)+cos\theta \sin(-\theta) & 
+\cos(\theta)cos(\theta)+\sin(\theta) \sin(\theta)
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -596,7 +599,8 @@ If $m = n$,  we say that $n + 1$ affinely independent
 vectors  $(u_0, u_1, \ldots, u_{n })$ form an {\it affine frame\/} of $\reals^n$. 
 
 \medskip
-(3) \\
+(3) 
+
 (3.1) \\
 \medskip
 Because $(u_0, u_1, \ldots, u_{n })$ is an affine frame of $\reals^n$, then from above we can get a basis in $\reals^{n+1}$, which is $\widehat{u}_0, \ldots,  \widehat{u}_{n}$. For any $v \in \reals^n$, we denote $\widehat{v} = (v, 1)$, then it can be uniquely written as the combination of $(\widehat{u}_i)$, such that $\widehat{v} = \sum_i \lambda_i \widehat{u}_i$. From the last row of equation, we know there should be $\sum_i \lambda_i = 1$. Along with $v = \sum_i \lambda_i u_i$, we can get the conclusion.\\
@@ -636,7 +640,7 @@ so that $(1 - (x_1 + \cdots + x_x)), x_1, \cdots,  x_n)$,
 are the barycentric coordinates of $v$ w.r.t. the affine frame
 $(u_0, u_1, \ldots, u_n)$.
 
-(3.3) \\
+(3.3) 
 
 \medskip
 The above shows that there is a one-to-one correspondence between
